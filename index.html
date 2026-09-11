@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rick & Morty - Personagens</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="index.html" class="logo">
+            Rick & Morty
+        </a>
+
+        <span class="api-status" id="apiStatus">
+            Conectando...
+        </span>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <h1>Personagens</h1>
+
+        <p>
+            Explore o universo de Rick and Morty.
+        </p>
+
+        <form id="searchForm" class="search-form">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Buscar personagem..."
+                autocomplete="off"
+            >
+
+            <button type="submit">
+                Buscar
+            </button>
+
+        </form>
+    </section>
+
+    <div id="loading" class="loading">
+        Carregando personagens...
+    </div>
+
+    <div id="error" class="error hidden"></div>
+
+    <section id="characters" class="characters-grid"></section>
+
+    <nav id="pagination" class="pagination"></nav>
+
+</main>
+
+<footer class="footer">
+    <p>
+        Projeto desenvolvido com Laravel + Rick and Morty API
+    </p>
+</footer>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
