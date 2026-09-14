@@ -67,7 +67,7 @@ async function loadCharacters(page = 1, name = '') {
         renderCharacters(data.results);
         renderPagination(data.info);
 
-        apiStatus.textContent = 'API online';
+        apiStatus.textContent = '';
 
     } catch (error) {
 
@@ -185,6 +185,16 @@ searchForm.addEventListener('submit', function(event) {
     const name = searchInput.value.trim();
 
     loadCharacters(1, name);
+});
+
+let searchTimeout;
+searchInput.addEventListener('input', function(event) {
+    clearTimeout(searchTimeout);
+    
+    searchTimeout = setTimeout(() => {
+        const name = event.target.value.trim();
+        loadCharacters(1, name);
+    }, 500);
 });
 
 function getStatusClass(status) {
