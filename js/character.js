@@ -63,7 +63,9 @@ function renderCharacter(character) {
             <div class="character-content">
 
                 <h1>
-                    ${escapeHtml(character.name)}
+                    <center>
+                        ${escapeHtml(character.name)}
+                    </center>
                 </h1>
 
                 <div class="detail-status">
